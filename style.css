@@ -1,0 +1,11 @@
+/* Gaya Khusus untuk tombol Discord */
+.tab-container a.tab-button {
+    /* Atur warna khusus jika diperlukan */
+    background-color: #7289DA; /* Warna Discord */
+    color: white;
+}
+
+.tab-container a.tab-button:hover {
+    background-color: #677BC4; 
+    color: white;
+}
