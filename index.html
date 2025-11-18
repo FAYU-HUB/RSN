@@ -2,8 +2,7 @@
 <html>
 <head>
 <title>Background Gradient</title>
-<div class="tab-container">
-    <a href="#" class="tab-button active">Menu</a>
+<div class="tabcontainer">
     <a href="#discord" class="tab-button">Discord</a>
 <style>
   body {
@@ -26,4 +25,32 @@
   <h1>RSN: Roblox Service New</h1>
   <p>Hello, Developer RSN Here Nothing can say So Bye</p>
 </body>
+// ... (Kode CSS di sini) ...
+
+<script>
+    function openTab(evt, tabcontainer) {
+        var i, tabcontent, tablinks;
+
+        // Menyembunyikan semua konten
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Menghapus status 'active' dari semua tombol
+        tablinks = document.getElementsByClassName("tab-button"); // Perhatikan class yang digunakan
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Menampilkan konten yang dipilih dan menandai tombolnya
+        document.getElementById(tabcontainer).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Tampilkan tab Beranda secara default saat halaman dimuat
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementsByClassName("tab-button")[0].click();
+    });
+</script>
 </html>
